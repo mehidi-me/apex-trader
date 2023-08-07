@@ -189,7 +189,6 @@
  .hero-bg{
      border-radius: 3rem;
      overflow: hidden;
-     height: 60rem;
 }
 /* hero section end */
 /* status section */
@@ -360,9 +359,8 @@
 /* Table section */
  .table{
      width: 100%;
-     min-width: 600px;
      height: 800px;
-     overflow-y: auto;
+     overflow: auto;
      direction:rtl;
 }
  .table table {
@@ -453,6 +451,8 @@
      justify-content: space-between;
      align-items: center;
      padding: 4rem 0;
+     flex-wrap: wrap;
+     gap: 3rem;
 }
  .footer-content p{
      width: 40rem;
@@ -477,10 +477,13 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
+     flex-wrap: wrap;
+     gap: 2rem;
 }
  .footer-bottom-links{
      display: flex;
      gap: 1rem;
+     flex-wrap: wrap;
 }
  .footer-bottom-links a{
      color: #fff;
@@ -488,6 +491,8 @@
      font-size: 1.4rem;
 }
 /* End Footer */
+
+
  @media (max-width: 1024px) {
      html {
          font-size: 45%;
@@ -496,10 +501,102 @@
          padding: 0 1.5rem;
     }
      .status {
-         gap: 5rem;
+         gap: 2rem;
+    }
+    .all-plans{
+        grid-template-columns: 1fr 1fr;
+    }
+    #referral .grid-2{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom{
+        justify-content: center;
     }
 }
  @media (max-width: 680px) {
+
+    .referral-image,
+    .referral-image img{
+        border: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .referral-image img{
+        position: inherit;
+        margin: 0;
+    }
+    .footer-bottom-links{
+        justify-content: center;
+    }
+
+    .status {
+        gap: 2rem;
+        grid-template-columns: 1fr;
+   }
+
+   .status .item{
+    border: 0;
+}
+.status .item:last-child{
+    align-items: start;
+}
+
+.status .item h2{
+    font-size: 2.8rem;
+}
+
+.sec-heading .grid-2{
+    gap:2rem
+}
+.sec-heading .sec-title{
+    font-size: 3.2rem;
+}
+
+.sec-heading h2.sec-title{
+    font-size: 2.8rem;
+}
+
+main{
+    padding-top: 10rem;
+}
+
+.referral-content .referral-title{
+    font-size: 2.8rem;
+    margin-top: 0;
+}
+
+#referral .grid-2{
+    gap:2rem
+}
+
+.referral-content .referral-des{
+    margin: 1.5rem 0;
+}
+
+.footer-menus.grid{
+    padding-top: 2rem;
+    grid-template-columns: 1fr 1fr !important;
+    text-align: center;
+}
+.footer-menus ul{
+    margin-bottom: 2rem;
+}
+
+.footer-content p{
+    width: 100%;
+}
+
+.plan-top .plan-priceing .plan-price{
+    font-size: 3.2rem;
+}
+
+.menu-leftcontent select{
+    display: none;
+}
+
+
      html {
          font-size: 60%;
     }
@@ -542,98 +639,9 @@
      [class*="grid"] {
          grid-template-columns: 1fr !important;
     }
-     .fix {
-         grid-column: 1/2;
-         grid-row: 1/2;
-    }
-     main {
-         padding-top: 20rem !important;
-         padding: 10rem 0;
-    }
-     main .content .title {
-         font-size: 5rem;
-    }
-     main .content p {
-         max-width: 100%;
-         font-size: 1.6rem;
-    }
-     .title span {
-         display: block;
-    }
-     .title span::before {
-         width: 50%;
-         left: 50%;
-         transform: translateX(-50%);
-         height: 3px;
-    }
-     .round-shape {
-         width: 100%;
-         top: -20%;
-    }
-     .time {
-         max-width: unset;
-         width: 300%;
-    }
-     .status {
-         gap: 2rem;
-         flex-wrap: wrap;
-    }
-     .status h2 {
-         font-size: 2rem;
-    }
-     .status p {
-         font-size: 1.6rem;
-    }
-     .sec-title {
-         font-size: 3rem;
-         margin-bottom: 3rem;
-         text-align: center;
-         width: 100%;
-    }
-     .sec-title.over {
-         width: 100%;
-    }
-     .sec-title::before {
-         left: 50%;
-         transform: translateX(-50%);
-         height: 3px;
-    }
-     .grid-2.adjustable .content {
-         text-align: center;
-    }
-     .content button {
-         margin: auto;
-         margin-top: 3rem;
-    }
-     .des {
-         text-align: center;
-         margin-bottom: 3rem;
-    }
-     .content h3 {
-         font-size: 2.3rem;
-    }
-     .list p {
-         font-size: 1.6rem;
-    }
-     .grid-3 {
-         gap: 1.5rem;
-    }
-     .image-wraper::before {
-         background: linear-gradient( 180deg, #191e29 0.59%, #191e2900 52.62%, #191e29 99.5% );
-    }
-     footer .flink {
-         flex-wrap: wrap;
-    }
-     .tcp {
-         padding-top: 5rem !important;
-    }
-     .tcp .main-t {
-         font-size: 3rem;
-    }
-     .tcp .contact {
-         padding: 2rem;
-    }
-     .tcp .des {
-         text-align: left;
+
+
+    .table table{
+        width: auto;
     }
 }
